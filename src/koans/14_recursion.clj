@@ -21,7 +21,9 @@
 (defn factorial [n]
   (loop [n   n
          acc 1]
-    (if (= n 1))))
+    (if (= n 1)
+      acc
+      (recur (dec n) (* n acc)))))
 
 (meditations
   "Recursion ends with a base case"
